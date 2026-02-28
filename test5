@@ -1,0 +1,59 @@
+% 极简核心配置：降低编译负载，保留所有出版要求
+\documentclass[12pt]{article} % 改用基础article类，手动加载中文支持（比ctexart更轻量）
+\usepackage{amsmath, amssymb}
+\usepackage{setspace}
+\setstretch{1.45} % 1.45倍行距
+
+% 行长控制
+\usepackage{geometry}
+\geometry{left=3cm, right=3cm, top=2.5cm, bottom=2.5cm, textwidth=14cm}
+
+% 轻量中英混排+Times New Roman字体（核心优化：无冗余）
+\usepackage{fontspec}
+\setmainfont{Times New Roman} % 英文Times New Roman
+\usepackage[UTF8]{ctex} % 手动加载中文，比ctexart更轻量
+\setCJKmainfont{SimSun} % 中文宋体
+
+% 基础格式（极简）
+\usepackage{indentfirst, enumitem}
+\setlength{\parindent}{2em}
+\newcommand{\questiontype}[1]{\begin{center}\textbf{#1}\end{center}}
+\newcommand{\keyword}[1]{\textbf{\underline{#1}}}
+\newcommand{\vocab}[3]{\textbf{#1} #2. #3（高频考点词）}
+\newenvironment{analysis}{\par\textbf{【解析】} \itshape}{\par\vspace{8pt}}
+
+% 正文（完整保留）
+\begin{document}
+\section{2025年专转本英语阅读冲刺讲义}
+\subsection{细节题解题技巧}
+
+\questiontype{【题型特征】}
+细节题是专转本英语阅读的高频题型，占比约30\%，核心考查学生定位原文关键信息、理解句意的能力。解题核心步骤：定位词查找→原文区间匹配→选项对比排除。
+
+\questiontype{【2024年真题示例】}
+\textbf{题干}：When the author says ``People tend to \keyword{overlook} the \keyword{hidden costs} of online shopping'', he means that \_\_\_\_.
+
+\begin{enumerate}[label=\Alph*), leftmargin=2em]
+  \item People usually ignore the indirect expenses of online shopping
+  \item People often forget to check the total price of online purchases
+  \item People rarely notice the delivery fees of online shopping
+  \item People never care about the quality of online shopping goods
+\end{enumerate}
+
+\begin{analysis}
+本题定位词为 \keyword{hidden costs}，对应原文第二段第二句 ``Many consumers fail to realize the extra charges beyond the marked price''，其中 ``hidden costs'' 与 ``extra charges beyond the marked price'' 为同义替换。
+
+\begin{itemize}[leftmargin=2em]
+  \item[\textbf{A}] \keyword{indirect expenses} 对应 ``hidden costs''，为正确答案；
+  \item[\textbf{B}] ``total price'' 侧重总价，而非“隐藏成本”，属于概念偷换；
+  \item[\textbf{C}] ``delivery fees'' 仅为隐藏成本的一种，以偏概全；
+  \item[\textbf{D}] ``never care about'' 语气绝对，原文无对应表述。
+\end{itemize}
+\end{analysis}
+
+\questiontype{【核心生词】}
+\vocab{overlook}{v}{忽视；忽略}
+\vocab{hidden}{adj}{隐藏的；隐秘的}
+\vocab{expense}{n}{费用；开支}
+
+\end{document}
